@@ -6,10 +6,10 @@ export class Directory extends Component {
   state = {
     sections: [
       {
-        title: 'hats',
+        title: 'hatspage',
         imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
         id: 1,
-        linkUrl: 'shop/hats',
+        linkUrl: 'shop/hatspage',
       },
       {
         title: 'jackets',
