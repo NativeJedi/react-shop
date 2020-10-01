@@ -1,0 +1,13 @@
+.sign-in {
+  width: 100%;
+  max-width: 380px;
+
+  &__title {
+    margin: 20px 0;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
