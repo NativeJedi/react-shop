@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "babel-loader": "^8.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.2.0",
@@ -14,10 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint": "eslint ./src",
+    "fix": "eslint ./src --fix"
   },
   "browserslist": [
     ">0.2%",
