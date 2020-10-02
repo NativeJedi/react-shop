@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/images/crown.svg';
 import { auth } from '../../firebase/firebase.utils';
+import { UserPropType } from '../../types/user.type';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/cart-icon.components';
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, isCartOpened }) => (
   <header className="header">
     <Link className="header__logo-container" to="/">
       <Logo className="logo" />
@@ -33,16 +36,15 @@ const Header = ({ currentUser }) => (
             </Link>
           )
       }
+      <CartIcon />
     </nav>
+    { isCartOpened ? <CartDropdown /> : null }
   </header>
 );
 
 Header.propTypes = {
-  currentUser: PropTypes.oneOfType([
-    PropTypes.shape({
-      email: PropTypes.string,
-    }),
-  ]),
+  currentUser: UserPropType,
+  isCartOpened: PropTypes.bool.isRequired,
 };
 
 Header.defaultProps = {
@@ -51,6 +53,7 @@ Header.defaultProps = {
 
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  isCartOpened: state.cart.isCartOpened,
 });
 
 export default connect(mapStateToProps)(Header);
