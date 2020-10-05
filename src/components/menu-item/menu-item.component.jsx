@@ -2,6 +2,7 @@ import React from 'react';
 import './menu-item.styles.scss';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { HistoryPropType } from '../../types/history.type';
 
 const MenuItem = ({
   title,
@@ -45,9 +46,7 @@ MenuItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   size: PropTypes.string,
   linkUrl: PropTypes.string.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
+  history: HistoryPropType.isRequired,
   match: PropTypes.shape({
     url: PropTypes.string.isRequired,
   }).isRequired,

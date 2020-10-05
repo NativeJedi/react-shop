@@ -8,15 +8,19 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import { setCurrentUser } from './redux/user/user.actions';
 
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+
+import { setCurrentUser } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selectors';
+
+import { UserPropType } from './types/user.type';
 import Header from './components/header/header.component';
+
+import CheckoutPage from './pages/checkout/checkout.component';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.components';
 import Entrance from './pages/entrance/entrance.component';
-import { selectCurrentUser } from './redux/user/user.selectors';
-import { UserPropType } from './types/user.type';
 
 class App extends Component {
   componentDidMount() {
@@ -51,12 +55,14 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route path="/shop" component={ShopPage} />
           <Route
+            exact
             path="/entrance"
             render={() => (currentUser ? <Redirect to="/" /> : <Entrance />)}
           />
-          <Route path="/shop" component={ShopPage} />
-          <Route path="/" component={HomePage} />
         </Switch>
       </div>
     );
