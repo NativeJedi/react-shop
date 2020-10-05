@@ -1,9 +1,11 @@
 import { CartActionTypes } from './cart.types';
-import { addItemToCart } from './cart.utils';
+import { addItemToCart, deleteItemById, removeItemFromCart } from './cart.utils';
 
 const {
   TOGGLE_CART,
   ADD_ITEM,
+  CLEAR_ITEM_FROM_CART,
+  REMOVE_ITEM,
 } = CartActionTypes;
 
 const INITIAL_STATE = {
@@ -19,6 +21,14 @@ const actionTypes = {
   [ADD_ITEM]: (state, payload) => ({
     ...state,
     cartItems: addItemToCart(state.cartItems, payload),
+  }),
+  [REMOVE_ITEM]: (state, payload) => ({
+    ...state,
+    cartItems: removeItemFromCart(state.cartItems, payload),
+  }),
+  [CLEAR_ITEM_FROM_CART]: (state, { id }) => ({
+    ...state,
+    cartItems: deleteItemById(state.cartItems, id),
   }),
 };
 

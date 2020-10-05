@@ -17,12 +17,12 @@
     }
   }
   &__name,
-  &__quantity,
+  .checkout-quantity,
   &__price {
     width: 23%;
   }
 
-  &__quantity {
+  .checkout-quantity {
     padding-left: 20px;
   }
 
@@ -30,5 +30,18 @@
     margin-left: 12px;
     padding: 0 5px;
     cursor: pointer;
+  }
+}
+
+.checkout-quantity {
+  display: flex;
+
+  &__arrow {
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+  &__value {
+    margin: 0 5px;
   }
 }
