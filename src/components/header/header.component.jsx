@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import './header.styles.scss';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 import { ReactComponent as Logo } from '../../assets/images/crown.svg';
 import { auth } from '../../firebase/firebase.utils';
+import { selectCartIsOpened } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { UserPropType } from '../../types/user.type';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.components';
@@ -51,9 +54,9 @@ Header.defaultProps = {
   currentUser: null,
 };
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-  isCartOpened: state.cart.isCartOpened,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  isCartOpened: selectCartIsOpened,
 });
 
 export default connect(mapStateToProps)(Header);

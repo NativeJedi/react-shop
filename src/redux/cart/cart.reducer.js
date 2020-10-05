@@ -1,15 +1,24 @@
 import { CartActionTypes } from './cart.types';
+import { addItemToCart } from './cart.utils';
 
-const { TOGGLE_CART } = CartActionTypes;
+const {
+  TOGGLE_CART,
+  ADD_ITEM,
+} = CartActionTypes;
 
 const INITIAL_STATE = {
   isCartOpened: false,
+  cartItems: [],
 };
 
 const actionTypes = {
   [TOGGLE_CART]: (state) => ({
     ...state,
     isCartOpened: !state.isCartOpened,
+  }),
+  [ADD_ITEM]: (state, payload) => ({
+    ...state,
+    cartItems: addItemToCart(state.cartItems, payload),
   }),
 };
 

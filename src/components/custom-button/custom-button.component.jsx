@@ -7,9 +7,14 @@ const CustomButton = ({
   type,
   onClick,
   isGoogleSignIn,
+  inverted,
 }) => (
   <button
-    className={`${isGoogleSignIn ? 'custom-button--google' : ''} custom-button`}
+    className={`
+      ${inverted ? 'custom-button--inverted' : ''}
+      ${isGoogleSignIn ? 'custom-button--google' : ''}
+      custom-button
+    `}
     type={type}
     onClick={onClick}
   >
@@ -22,6 +27,7 @@ CustomButton.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   isGoogleSignIn: PropTypes.bool,
+  inverted: PropTypes.bool,
 };
 
 CustomButton.defaultProps = {
@@ -29,6 +35,7 @@ CustomButton.defaultProps = {
   type: 'button',
   onClick: () => {},
   isGoogleSignIn: false,
+  inverted: false,
 };
 
 export default CustomButton;
