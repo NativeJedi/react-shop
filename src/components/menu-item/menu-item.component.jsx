@@ -3,6 +3,7 @@ import './menu-item.styles.scss';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { HistoryPropType } from '../../types/history.type';
+import { MatchPropType } from '../../types/match.type';
 
 const MenuItem = ({
   title,
@@ -17,7 +18,7 @@ const MenuItem = ({
       return;
     }
 
-    history.push(`${match.url}${linkUrl}`);
+    history.push(`${match.path}${linkUrl}`);
   };
 
   return (
@@ -47,9 +48,7 @@ MenuItem.propTypes = {
   size: PropTypes.string,
   linkUrl: PropTypes.string.isRequired,
   history: HistoryPropType.isRequired,
-  match: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-  }).isRequired,
+  match: MatchPropType.isRequired,
 };
 
 MenuItem.defaultProps = {

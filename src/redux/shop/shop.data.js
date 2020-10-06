@@ -1,8 +1,7 @@
-export const SHOP_DATA = [
-  {
+export const SHOP_DATA = new Map([
+  ['hats', {
     id: 1,
     title: 'Hats',
-    routeName: 'hats',
     items: [
       {
         id: 1,
@@ -59,11 +58,10 @@ export const SHOP_DATA = [
         price: 16,
       },
     ],
-  },
-  {
+  }],
+  ['sneakers', {
     id: 2,
     title: 'Sneakers',
-    routeName: 'sneakers',
     items: [
       {
         id: 10,
@@ -114,11 +112,10 @@ export const SHOP_DATA = [
         price: 200,
       },
     ],
-  },
-  {
+  }],
+  ['jackets', {
     id: 3,
     title: 'Jackets',
-    routeName: 'jackets',
     items: [
       {
         id: 18,
@@ -151,11 +148,10 @@ export const SHOP_DATA = [
         price: 185,
       },
     ],
-  },
-  {
+  }],
+  ['womens', {
     id: 4,
     title: 'Womens',
-    routeName: 'womens',
     items: [
       {
         id: 23,
@@ -200,11 +196,10 @@ export const SHOP_DATA = [
         price: 20,
       },
     ],
-  },
-  {
+  }],
+  ['mens', {
     id: 5,
     title: 'Mens',
-    routeName: 'mens',
     items: [
       {
         id: 30,
@@ -243,7 +238,5 @@ export const SHOP_DATA = [
         price: 25,
       },
     ],
-  },
-];
-
-export default SHOP_DATA;
+  }],
+]);
