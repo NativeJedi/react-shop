@@ -10,7 +10,7 @@ export const selectShopCollections = createSelector(
 
 export const selectShopCollectionValues = createSelector(
   [selectShop],
-  ({ collections }) => collections.values(),
+  ({ collections }) => Array.from(collections).map(([, value]) => value),
 );
 
 export const selectShopCollection = memoize((collectionUrl) => createSelector(
