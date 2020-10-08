@@ -1,4 +1,3 @@
-import './collections-overview.styles.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -6,9 +5,10 @@ import { createStructuredSelector } from 'reselect';
 import { selectShopCollectionValues } from '../../redux/shop/shop.selectors';
 import { CollectionPropType } from '../../types/collection.type';
 import CollectionPreview from '../collection-preview/collection-preview.component';
+import { CollectionOverviewContainer } from './collection-overview.styles';
 
 const CollectionsOverview = ({ collections }) => (
-  <div className="collections-overview">
+  <CollectionOverviewContainer>
     {
       collections.map(({
         id,
@@ -16,7 +16,7 @@ const CollectionsOverview = ({ collections }) => (
         items,
       }) => <CollectionPreview title={title} key={id} items={items} />)
     }
-  </div>
+  </CollectionOverviewContainer>
 );
 
 CollectionsOverview.propTypes = {

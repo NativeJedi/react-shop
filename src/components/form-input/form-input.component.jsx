@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './form-input.styles.scss';
+import { FormInputContainer, FormInputGroup, FormInputLabel } from './form-input.styles';
 
 const FormInput = ({
   handleChange,
@@ -11,9 +11,8 @@ const FormInput = ({
   value,
   name,
 }) => (
-  <div className="group">
-    <input
-      className="form-input"
+  <FormInputGroup>
+    <FormInputContainer
       onChange={handleChange}
       id={id}
       type={type}
@@ -24,16 +23,16 @@ const FormInput = ({
     {
       label
         ? (
-          <label
+          <FormInputLabel
             htmlFor={id}
-            className={`${value.length ? 'shrink' : null} form-input-label`}
+            shrink={value.length}
           >
             { label }
-          </label>
+          </FormInputLabel>
         )
         : null
     }
-  </div>
+  </FormInputGroup>
 );
 
 FormInput.propTypes = {

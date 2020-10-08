@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { ReactComponent as ShoppingIcon } from '../../assets/images/shopping-bag.svg';
-import './cart-icon.styles.scss';
 import { toggleCart as toggleCartAction } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
+import { CartCounterContainer, CartIconContainer, ShoppingIconContainer } from './cart-icon.styles';
 
 const CartIcon = ({ toggleCart, cartItemsCount }) => (
-  <button
-    className="cart-icon btn-default"
+  <CartIconContainer
+    className="btn-default"
     onClick={toggleCart}
   >
-    <ShoppingIcon className="cart-icon__icon" />
-    <span className="cart-icon__counter">{cartItemsCount}</span>
-  </button>
+    <ShoppingIconContainer as={ShoppingIcon} />
+    <CartCounterContainer>{cartItemsCount}</CartCounterContainer>
+  </CartIconContainer>
 );
 
 CartIcon.propTypes = {

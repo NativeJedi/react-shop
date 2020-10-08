@@ -15,6 +15,7 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
+  font-size: inherit;
 }
 
 .btn-default {

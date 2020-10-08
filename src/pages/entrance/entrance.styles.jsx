@@ -1,7 +1,9 @@
-.entrance {
+import styled from 'styled-components';
+
+export const EntrancePageSection = styled.section`
   width: 100%;
   max-width: 850px;
   display: flex;
   justify-content: space-between;
   margin: 30px auto;
-}
+`;

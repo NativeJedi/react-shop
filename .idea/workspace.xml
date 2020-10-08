@@ -5,8 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f98d9c67-cfa6-4bab-af3d-af97ce7eecae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkout-item/checkout-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/directory/directory.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form-input/form-input.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/stripe-button/stripe-button.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/checkout/checkout.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/collection/collection.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/entrance/entrance.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/homepage/homepage.styles.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.components.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-item/cart-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-item/cart-item.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkout-item/checkout-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkout-item/checkout-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkout-item/checkout-item.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-item/collection-item.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collections-overview.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collections-overview.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collections-overview.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/directory/directory.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/directory/directory.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/directory/directory.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form-input/form-input.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form-input/form-input.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form-input/form-input.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-up/sign-up.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stripe-button/stripe-button.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stripe-button/stripe-button.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stripe-button/stripe-button.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/checkout/checkout.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/checkout/checkout.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/checkout/checkout.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/collection/collection.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/entrance/entrance.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/entrance/entrance.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/entrance/entrance.styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homepage/homepage.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homepage/homepage.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homepage/homepage.styles.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +135,7 @@
       <workItem from="1602002534935" duration="1140000" />
       <workItem from="1602068684006" duration="25000" />
       <workItem from="1602073617091" duration="14000" />
-      <workItem from="1602147290125" duration="71000" />
+      <workItem from="1602147290125" duration="12376000" />
     </task>
     <servers />
   </component>
@@ -88,14 +147,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="480" y="74" key="#CSS/0.0.1536.824@0.0.1536.824" timestamp="1601546179839" />
-    <state x="361" y="53" key="#Plugins" timestamp="1601541776837">
+    <state x="361" y="53" key="#Plugins" timestamp="1602150975515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="53" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1601541776837" />
+    <state x="361" y="53" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1602150975515" />
     <state x="439" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601661921247">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601661921247" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602161107875">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602161107875" />
     <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1601742313931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -104,17 +167,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601394909858" />
-    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1602073628416">
+    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1602151547298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602073628416" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601985856846">
+    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602151547298" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1602160688168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601985856846" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602147323261">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602160688168" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602158126767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602147323261" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602158126767" />
   </component>
 </project>

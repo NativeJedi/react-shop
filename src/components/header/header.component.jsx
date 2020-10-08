@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './header.styles.scss';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { ReactComponent as Logo } from '../../assets/images/crown.svg';
 import { auth } from '../../firebase/firebase.utils';
@@ -11,38 +9,43 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { UserPropType } from '../../types/user.type';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.components';
+import {
+  HeaderContainer,
+  HeaderLinkContainer,
+  HeaderNavigationContainer,
+  LogoContainer,
+} from './header.styles';
 
 const Header = ({ currentUser, isCartOpened }) => (
-  <header className="header">
-    <Link className="header__logo-container" to="/">
+  <HeaderContainer>
+    <LogoContainer to="/">
       <Logo className="logo" />
-    </Link>
+    </LogoContainer>
 
-    <nav className="header-options">
-      <Link className="header-options__option" to="/shop">Shop</Link>
+    <HeaderNavigationContainer>
+      <HeaderLinkContainer to="/shop">Shop</HeaderLinkContainer>
       {
         currentUser
           ? (
-            <button
-              className="header-options__option btn-default"
+            <HeaderLinkContainer
+              as="button"
+              className="btn-default"
               onClick={() => auth.signOut()}
             >
               Sign out
-            </button>
+            </HeaderLinkContainer>
           )
           : (
-            <Link
-              to="/entrance"
-              className="header-options__option"
-            >
+            <HeaderLinkContainer to="/entrance">
               Sign in
-            </Link>
+            </HeaderLinkContainer>
           )
       }
       <CartIcon />
-    </nav>
+    </HeaderNavigationContainer>
+
     { isCartOpened ? <CartDropdown /> : null }
-  </header>
+  </HeaderContainer>
 );
 
 Header.propTypes = {

@@ -1,12 +1,16 @@
 import React from 'react';
-import './collection-preview.styles.scss';
 import PropTypes from 'prop-types';
 import CollectionItem from '../collection-item/collection-item.component';
+import {
+  CollectionPreviewContainer,
+  CollectionPreviewTitle,
+  CollectionPreviewWrapper,
+} from './collection-preview.styles';
 
 const CollectionPreview = ({ title, items }) => (
-  <div className="collection-preview">
-    <h1 className="collection-preview__title">{ title }</h1>
-    <div className="collection-preview__preview">
+  <CollectionPreviewContainer>
+    <CollectionPreviewTitle>{ title }</CollectionPreviewTitle>
+    <CollectionPreviewWrapper>
       {
         items
           .filter((item, index) => index < 4)
@@ -17,8 +21,8 @@ const CollectionPreview = ({ title, items }) => (
             />
           ))
       }
-    </div>
-  </div>
+    </CollectionPreviewWrapper>
+  </CollectionPreviewContainer>
 );
 
 CollectionPreview.propTypes = {

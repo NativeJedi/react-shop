@@ -1,9 +1,15 @@
 import React from 'react';
-import './menu-item.styles.scss';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { HistoryPropType } from '../../types/history.type';
 import { MatchPropType } from '../../types/match.type';
+import {
+  MenuItemBackground,
+  MenuItemContainer,
+  MenuItemContent,
+  MenuItemSubtitle,
+  MenuItemTitle,
+} from './menu-item.styles';
 
 const MenuItem = ({
   title,
@@ -22,23 +28,20 @@ const MenuItem = ({
   };
 
   return (
-    <div
-      className={`menu-item ${size}`}
+    <MenuItemContainer
       role="button"
       tabIndex={0}
       onKeyUp={handleRoute}
       onClick={handleRoute}
+      size={size}
     >
-      <div
-        style={{ backgroundImage: `url(${imageUrl})` }}
-        className="menu-item__background"
-      />
+      <MenuItemBackground imageUrl={imageUrl} />
 
-      <div className="menu-item__content">
-        <h1 className="menu-item__title">{ title }</h1>
-        <span className="menu-item__subtitle">SHOP NOW</span>
-      </div>
-    </div>
+      <MenuItemContent>
+        <MenuItemTitle>{ title }</MenuItemTitle>
+        <MenuItemSubtitle>SHOP NOW</MenuItemSubtitle>
+      </MenuItemContent>
+    </MenuItemContainer>
   );
 };
 
