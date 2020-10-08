@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f98d9c67-cfa6-4bab-af3d-af97ce7eecae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/shop/shop.selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/shop/shop.selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,10 @@
       <workItem from="1601923242077" duration="759000" />
       <workItem from="1601928054022" duration="923000" />
       <workItem from="1601981353318" duration="7617000" />
-      <workItem from="1602002534935" duration="62000" />
+      <workItem from="1602002534935" duration="1140000" />
+      <workItem from="1602068684006" duration="25000" />
+      <workItem from="1602073617091" duration="14000" />
+      <workItem from="1602147290125" duration="71000" />
     </task>
     <servers />
   </component>
@@ -102,17 +104,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601394909858" />
-    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1601982269930">
+    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1602073628416">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1601982269930" />
+    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602073628416" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1601985856846">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601985856846" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601988542464">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602147323261">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601988542464" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602147323261" />
   </component>
 </project>
