@@ -1,10 +1,15 @@
-import { SHOP_DATA } from './shop.data';
+import { ShopActionTypes } from './shop.types';
 
 const INITIAL_STATE = {
-  collections: SHOP_DATA,
+  collections: null,
 };
 
-const actionTypes = {};
+const actionTypes = {
+  [ShopActionTypes.SET_COLLECTIONS]: (state, payload) => ({
+    ...state,
+    collections: payload,
+  }),
+};
 
 const shopReducer = (state = INITIAL_STATE, { type, payload }) => {
   const action = actionTypes[type];
@@ -13,7 +18,7 @@ const shopReducer = (state = INITIAL_STATE, { type, payload }) => {
     return state;
   }
 
-  return action(payload);
+  return action(state, payload);
 };
 
 export default shopReducer;

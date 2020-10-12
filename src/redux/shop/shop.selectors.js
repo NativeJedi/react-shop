@@ -9,11 +9,11 @@ export const selectShopCollections = createSelector(
 );
 
 export const selectShopCollectionValues = createSelector(
-  [selectShop],
-  ({ collections }) => Array.from(collections).map(([, value]) => value),
+  [selectShopCollections],
+  (collections) => (collections && Object.values(collections)) || [],
 );
 
 export const selectShopCollection = memoize((collectionUrl) => createSelector(
   [selectShopCollections],
-  (collections) => collections.get(collectionUrl),
+  (collections) => (collections && collections[collectionUrl]) || null,
 ));
