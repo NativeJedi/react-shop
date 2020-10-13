@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { ReactComponent as Logo } from '../../assets/images/crown.svg';
-import { auth } from '../../firebase/firebase.utils';
 import { selectCartIsOpened } from '../../redux/cart/cart.selectors';
+import { signOutStart } from '../../redux/user/user.actions';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { UserPropType } from '../../types/user.type';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
@@ -16,7 +16,7 @@ import {
   LogoContainer,
 } from './header.styles';
 
-const Header = ({ currentUser, isCartOpened }) => (
+const Header = ({ currentUser, isCartOpened, signOut }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className="logo" />
@@ -30,7 +30,7 @@ const Header = ({ currentUser, isCartOpened }) => (
             <HeaderLinkContainer
               as="button"
               className="btn-default"
-              onClick={() => auth.signOut()}
+              onClick={signOut}
             >
               Sign out
             </HeaderLinkContainer>
@@ -51,6 +51,7 @@ const Header = ({ currentUser, isCartOpened }) => (
 Header.propTypes = {
   currentUser: UserPropType,
   isCartOpened: PropTypes.bool.isRequired,
+  signOut: PropTypes.func.isRequired,
 };
 
 Header.defaultProps = {
@@ -62,4 +63,8 @@ const mapStateToProps = createStructuredSelector({
   isCartOpened: selectCartIsOpened,
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  signOut: () => dispatch(signOutStart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

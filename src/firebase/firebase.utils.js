@@ -18,13 +18,11 @@ firebase.initializeApp(config);
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-provider.setCustomParameters({
+googleAuthProvider.setCustomParameters({
   prompt: 'select_account',
 });
-
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export const createUserProfileDocument = async (user, additionalData) => {
   if (!user) return null;
@@ -83,5 +81,12 @@ export const parseCollections = (collections) => collections.reduce((collectionM
     [lowerTitle]: parsedCollection,
   };
 }, {});
+
+export const getCurrentUser = () => new Promise((resolve, reject) => {
+  const unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
+    unsubscribeFromAuth();
+    resolve(user);
+  }, reject);
+});
 
 export default firebase;

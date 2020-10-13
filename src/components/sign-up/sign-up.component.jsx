@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { signUpStart } from '../../redux/user/user.actions';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
@@ -22,6 +24,8 @@ class SignUp extends Component {
       confirmPassword,
     } = this.state;
 
+    const { signUp } = this.props;
+
     if (password !== confirmPassword) {
       alert('Password don\'t match');
       return;
@@ -31,20 +35,11 @@ class SignUp extends Component {
       alert('Password should be more that 6 symbols');
     }
 
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(email, password);
-
-      await createUserProfileDocument(user, { displayName });
-
-      this.setState({
-        displayName: '',
-        password: '',
-        confirmPassword: '',
-        email: '',
-      });
-    } catch (err) {
-      alert('Creating user error');
-    }
+    signUp({
+      email,
+      password,
+      displayName,
+    });
   }
 
   handleChange = ({ target }) => {
@@ -113,4 +108,12 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+SignUp.propTypes = {
+  signUp: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  signUp: (data) => dispatch(signUpStart(data)),
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);

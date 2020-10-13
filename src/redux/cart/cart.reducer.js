@@ -6,6 +6,7 @@ const {
   ADD_ITEM,
   CLEAR_ITEM_FROM_CART,
   REMOVE_ITEM,
+  CLEAR_CART,
 } = CartActionTypes;
 
 const INITIAL_STATE = {
@@ -29,6 +30,10 @@ const actionTypes = {
   [CLEAR_ITEM_FROM_CART]: (state, { id }) => ({
     ...state,
     cartItems: deleteItemById(state.cartItems, id),
+  }),
+  [CLEAR_CART]: (state) => ({
+    ...state,
+    cartItems: [],
   }),
 };
 
