@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { signUpStart } from '../../redux/user/user.actions';
@@ -6,25 +6,23 @@ import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
-class SignUp extends Component {
-  state = {
+const SignUp = ({ signUp }) => {
+  const [credentials, setCredentials] = useState({
     displayName: '',
     password: '',
     confirmPassword: '',
     email: '',
-  }
+  });
 
-  handleSubmit = async (e) => {
+  const {
+    displayName,
+    password,
+    confirmPassword,
+    email,
+  } = credentials;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const {
-      email,
-      displayName,
-      password,
-      confirmPassword,
-    } = this.state;
-
-    const { signUp } = this.props;
 
     if (password !== confirmPassword) {
       alert('Password don\'t match');
@@ -40,73 +38,67 @@ class SignUp extends Component {
       password,
       displayName,
     });
-  }
+  };
 
-  handleChange = ({ target }) => {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
 
-    this.setState({ [name]: value });
-  }
+    setCredentials({
+      ...credentials,
+      [name]: value,
+    });
+  };
 
-  render() {
-    const {
-      email,
-      displayName,
-      password,
-      confirmPassword,
-    } = this.state;
+  return (
+    <SignUpContainer>
+      <SignUpTitle>I don&apos;t have an account</SignUpTitle>
+      <span>Sign up with your email and password</span>
 
-    return (
-      <SignUpContainer>
-        <SignUpTitle>I don&apos;t have an account</SignUpTitle>
-        <span>Sign up with your email and password</span>
+      <form onSubmit={handleSubmit}>
+        <FormInput
+          name="displayName"
+          value={displayName}
+          handleChange={handleChange}
+          label="Display name"
+          id="display_name"
+          required
+        />
 
-        <form onSubmit={this.handleSubmit}>
-          <FormInput
-            name="displayName"
-            value={displayName}
-            handleChange={this.handleChange}
-            label="Display name"
-            id="display_name"
-            required
-          />
+        <FormInput
+          type="email"
+          name="email"
+          value={email}
+          handleChange={handleChange}
+          label="Email"
+          id="sign_up_email"
+          required
+        />
 
-          <FormInput
-            type="email"
-            name="email"
-            value={email}
-            handleChange={this.handleChange}
-            label="Email"
-            id="sign_up_email"
-            required
-          />
+        <FormInput
+          type="password"
+          name="password"
+          value={password}
+          handleChange={handleChange}
+          label="Password"
+          id="sign_up_password"
+          required
+        />
 
-          <FormInput
-            type="password"
-            name="password"
-            value={password}
-            handleChange={this.handleChange}
-            label="Password"
-            id="sign_up_password"
-            required
-          />
+        <FormInput
+          type="password"
+          name="confirmPassword"
+          value={confirmPassword}
+          handleChange={handleChange}
+          label="Confirm password"
+          id="sign_up_confirm_password"
+          required
+        />
 
-          <FormInput
-            type="password"
-            name="confirmPassword"
-            value={confirmPassword}
-            handleChange={this.handleChange}
-            label="Confirm password"
-            id="sign_up_confirm_password"
-            required
-          />
-
-          <CustomButton type="submit">Sign up</CustomButton>
-        </form>
-      </SignUpContainer>
-    );
-  }
-}
+        <CustomButton type="submit">Sign up</CustomButton>
+      </form>
+    </SignUpContainer>
+  );
+};
 
 SignUp.propTypes = {
   signUp: PropTypes.func.isRequired,

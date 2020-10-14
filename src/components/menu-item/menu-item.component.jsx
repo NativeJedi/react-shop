@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { HistoryPropType } from '../../types/history.type';
-import { MatchPropType } from '../../types/match.type';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import {
   MenuItemBackground,
   MenuItemContainer,
@@ -16,9 +14,10 @@ const MenuItem = ({
   imageUrl,
   size,
   linkUrl,
-  match,
-  history,
 }) => {
+  const history = useHistory();
+  const match = useRouteMatch();
+
   const handleRoute = ({ key }) => {
     if (key && key !== 'Enter') {
       return;
@@ -50,12 +49,10 @@ MenuItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   size: PropTypes.string,
   linkUrl: PropTypes.string.isRequired,
-  history: HistoryPropType.isRequired,
-  match: MatchPropType.isRequired,
 };
 
 MenuItem.defaultProps = {
   size: '',
 };
 
-export default withRouter(MenuItem);
+export default MenuItem;

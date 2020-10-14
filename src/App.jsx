@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -20,33 +20,27 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.components';
 import Entrance from './pages/entrance/entrance.component';
 
-class App extends Component {
-  componentDidMount() {
-    const { checkUserSession } = this.props;
-
+const App = ({ checkUserSession, currentUser }) => {
+  useEffect(() => {
     checkUserSession();
-  }
+  }, [checkUserSession]);
 
-  render() {
-    const { currentUser } = this.props;
-
-    return (
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route
-            exact
-            path="/entrance"
-            render={() => (currentUser ? <Redirect to="/" /> : <Entrance />)}
-          />
-        </Switch>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/checkout" component={CheckoutPage} />
+        <Route path="/shop" component={ShopPage} />
+        <Route
+          exact
+          path="/entrance"
+          render={() => (currentUser ? <Redirect to="/" /> : <Entrance />)}
+        />
+      </Switch>
+    </div>
+  );
+};
 
 App.propTypes = {
   checkUserSession: PropTypes.func.isRequired,
