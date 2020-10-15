@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import { StripeContainer, WarningMessage } from './stripe-button.styles';
+import { clearCart } from '../../redux/cart/cart.actions';
 
 const STRIPE_API_KEY = 'pk_test_51HZEXKHQarsc8i8zbqJegMNUfr8tUicgj6sXc3Vz5CgPIWea67dQxdRV2fojAFiHBdKKkY45iS75QVMDF0reMGyx00WHPhwJU1';
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
+
+  const dispatch = useDispatch();
+
+  const clearCartOnSuccess = useCallback(() => {
+    dispatch(clearCart());
+  }, [dispatch]);
 
   const onToken = async (token) => {
     try {
@@ -15,6 +23,8 @@ const StripeCheckoutButton = ({ price }) => {
         token,
         amount: priceForStripe,
       });
+
+      clearCartOnSuccess();
 
       alert('The payment has been processed!');
     } catch (e) {
