@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Route,
   Switch,
   Redirect,
 } from 'react-router-dom';
-import { createStructuredSelector } from 'reselect';
 
 import { checkUserSession as checkUserSessionAction } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-import { UserPropType } from './types/user.type';
 import Header from './components/header/header.component';
 
 import CheckoutPage from './pages/checkout/checkout.component';
@@ -20,7 +17,16 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.components';
 import Entrance from './pages/entrance/entrance.component';
 
-const App = ({ checkUserSession, currentUser }) => {
+const App = () => {
+  const dispatch = useDispatch();
+
+  const currentUser = useSelector(selectCurrentUser);
+
+  const checkUserSession = useCallback(
+    () => dispatch(checkUserSessionAction()),
+    [dispatch],
+  );
+
   useEffect(() => {
     checkUserSession();
   }, [checkUserSession]);
@@ -42,21 +48,4 @@ const App = ({ checkUserSession, currentUser }) => {
   );
 };
 
-App.propTypes = {
-  checkUserSession: PropTypes.func.isRequired,
-  currentUser: UserPropType,
-};
-
-App.defaultProps = {
-  currentUser: null,
-};
-
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  checkUserSession: () => dispatch(checkUserSessionAction()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
