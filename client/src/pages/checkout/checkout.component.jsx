@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useSelector } from 'react-redux';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
-import { CartItemPropType } from '../../types/cart-item.type';
 import {
   CheckoutHeader,
   CheckoutHeaderBlock,
@@ -13,35 +10,30 @@ import {
   CheckoutTotalContainer,
 } from './checkout.styles';
 
-const CheckoutPage = ({ cartItems, cartItemsTotal }) => (
-  <CheckoutPageSection>
-    <CheckoutHeader>
-      <CheckoutHeaderBlock>Product</CheckoutHeaderBlock>
-      <CheckoutHeaderBlock>Description</CheckoutHeaderBlock>
-      <CheckoutHeaderBlock>Quantity</CheckoutHeaderBlock>
-      <CheckoutHeaderBlock>Price</CheckoutHeaderBlock>
-      <CheckoutHeaderBlock>Remove</CheckoutHeaderBlock>
-    </CheckoutHeader>
+const CheckoutPage = () => {
+  const cartItems = useSelector(selectCartItems);
+  const cartItemsTotal = useSelector(selectCartTotal);
 
-    {cartItems.map((item) => <CheckoutItem key={item.id} item={item} />)}
+  return (
+    <CheckoutPageSection>
+      <CheckoutHeader>
+        <CheckoutHeaderBlock>Product</CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>Description</CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>Quantity</CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>Price</CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>Remove</CheckoutHeaderBlock>
+      </CheckoutHeader>
 
-    <CheckoutTotalContainer>
-      Total: $
-      { cartItemsTotal }
-    </CheckoutTotalContainer>
+      {cartItems.map((item) => <CheckoutItem key={item.id} item={item} />)}
 
-    <StripeCheckoutButton price={cartItemsTotal} />
-  </CheckoutPageSection>
-);
+      <CheckoutTotalContainer>
+        Total: $
+        { cartItemsTotal }
+      </CheckoutTotalContainer>
 
-CheckoutPage.propTypes = {
-  cartItems: PropTypes.arrayOf(CartItemPropType).isRequired,
-  cartItemsTotal: PropTypes.number.isRequired,
+      <StripeCheckoutButton price={cartItemsTotal} />
+    </CheckoutPageSection>
+  );
 };
 
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-  cartItemsTotal: selectCartTotal,
-});
-
-export default connect(mapStateToProps)(CheckoutPage);
+export default CheckoutPage;

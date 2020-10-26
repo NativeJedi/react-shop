@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import { CartItemPropType } from '../../types/cart-item.type';
 import { addItem as addItemAction } from '../../redux/cart/cart.actions';
 import {
@@ -12,9 +11,12 @@ import {
 
 const CollectionItem = ({
   item,
-  addItem,
 }) => {
   const { price, name, imageUrl } = item;
+
+  const dispatch = useDispatch();
+
+  const addItem = useCallback(() => dispatch(addItemAction(item)), [dispatch, item]);
 
   return (
     <CollectionItemContainer>
@@ -37,11 +39,6 @@ const CollectionItem = ({
 
 CollectionItem.propTypes = {
   item: CartItemPropType.isRequired,
-  addItem: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItemAction(item)),
-});
-
-export default connect(null, mapDispatchToProps)(CollectionItem);
+export default CollectionItem;

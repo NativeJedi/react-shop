@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -22,14 +22,9 @@ const App = () => {
 
   const currentUser = useSelector(selectCurrentUser);
 
-  const checkUserSession = useCallback(
-    () => dispatch(checkUserSessionAction()),
-    [dispatch],
-  );
-
   useEffect(() => {
-    checkUserSession();
-  }, [checkUserSession]);
+    dispatch(checkUserSessionAction());
+  }, [dispatch]);
 
   return (
     <div>

@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { useState, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import { SignInButtons, SignInContainer, SignInTitle } from './sign-in.styles';
 
-const SignIn = ({ emailSignIn, googleSignIn }) => {
+const SignIn = () => {
+  const dispatch = useDispatch();
+
+  const googleSignIn = useCallback(
+    () => dispatch(googleSignInStart()),
+    [dispatch],
+  );
+
+  const emailSignIn = useCallback(
+    (email, password) => dispatch(emailSignInStart({
+      email,
+      password,
+    })),
+    [dispatch],
+  );
+
   const [userCredentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -79,17 +93,4 @@ const SignIn = ({ emailSignIn, googleSignIn }) => {
   );
 };
 
-SignIn.propTypes = {
-  googleSignIn: PropTypes.func.isRequired,
-  emailSignIn: PropTypes.func.isRequired,
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  googleSignIn: () => dispatch(googleSignInStart()),
-  emailSignIn: (email, password) => dispatch(emailSignInStart({
-    email,
-    password,
-  })),
-});
-
-export default connect(null, mapDispatchToProps)(SignIn);
+export default SignIn;

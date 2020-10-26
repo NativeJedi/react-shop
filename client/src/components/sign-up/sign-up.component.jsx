@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { useState, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import { signUpStart } from '../../redux/user/user.actions';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
-const SignUp = ({ signUp }) => {
+const SignUp = () => {
+  const dispatch = useDispatch();
+
+  const signUp = useCallback(
+    (data) => dispatch(signUpStart(data)),
+    [dispatch],
+  );
+
   const [credentials, setCredentials] = useState({
     displayName: '',
     password: '',
@@ -100,12 +106,4 @@ const SignUp = ({ signUp }) => {
   );
 };
 
-SignUp.propTypes = {
-  signUp: PropTypes.func.isRequired,
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  signUp: (data) => dispatch(signUpStart(data)),
-});
-
-export default connect(null, mapDispatchToProps)(SignUp);
+export default SignUp;
