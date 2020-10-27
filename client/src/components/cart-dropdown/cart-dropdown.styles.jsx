@@ -13,6 +13,9 @@ export const CartDropdownContainer = styled.div`
   right: 40px;
   z-index: 5;
   
+  @media only screen and (max-width: 800px) {
+    right: 20px;
+  }
   button {
     margin-top: auto;
   }

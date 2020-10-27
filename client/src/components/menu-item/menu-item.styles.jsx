@@ -50,13 +50,29 @@ export const MenuItemContainer = styled.div`
   margin: 0 7.5px 15px;
   overflow: hidden;
   ${({ size }) => sizes[size] || sizes.default};
-  
+
   &:first-child {
     margin-right: 7.5px;
+    @media only screen and (max-width: 440px) {
+      margin-right: auto;
+    }
   }
 
   &:last-child {
     margin-left: 7.5px;
+    @media only screen and (max-width: 440px) {
+      margin-left: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    height: 200px;
+  }
+  @media only screen and (max-width: 440px) {
+    max-width: 300px;
+    min-width: auto;
+    width: 100%;
+    margin: 0 auto 20px auto;
   }
   
   &:hover {

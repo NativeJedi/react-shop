@@ -14,4 +14,10 @@ export const CollectionPreviewTitle = styled.h1`
 export const CollectionPreviewWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  
+  @media only screen and (max-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
 `;

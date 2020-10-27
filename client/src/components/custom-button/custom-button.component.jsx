@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ChildrenPropType } from '../../types/children.type';
 import { CustomButtonContainer } from './custom-button.styles';
 
 const CustomButton = ({
@@ -20,7 +21,7 @@ const CustomButton = ({
 );
 
 CustomButton.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  children: ChildrenPropType,
   type: PropTypes.string,
   onClick: PropTypes.func,
   isGoogleSignIn: PropTypes.bool,

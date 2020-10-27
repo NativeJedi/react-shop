@@ -5,19 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f98d9c67-cfa6-4bab-af3d-af97ce7eecae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/error-boundary/error-boundary.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/spinner/spinner.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/global.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/types/children.type.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/cart-icon/cart-icon.components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-icon/cart-icon.components.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/directory/directory.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/directory/directory.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/sign-up/sign-up.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sign-up/sign-up.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/checkout/checkout.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/checkout/checkout.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/collection/collection.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/collection/collection.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/shop/shop.components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/shop/shop.components.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/collection-preview/collection-preview.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/collection-preview/collection-preview.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/custom-button/custom-button.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/custom-button/custom-button.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/menu-item/menu-item.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/menu-item/menu-item.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/with-spinner/with-spinner.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/with-spinner/with-spinner.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/with-spinner/with-spinner.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/spinner/spinner.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/checkout/checkout.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/checkout/checkout.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/collection/collection.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/collection/collection.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/entrance/entrance.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/entrance/entrance.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/homepage/homepage.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/homepage/homepage.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +66,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Proj\react-course\react-shop\src\components\menu-item" />
-      <recent name="D:\Proj\react-course\react-shop\src\components\homepage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Proj\react-course\react-shop\client\src\components\spinner" />
       <recent name="D:\Proj\react-course\react-shop\client" />
       <recent name="D:\Proj\react-course\react-shop\src\components" />
       <recent name="D:\Proj\react-course\react-shop\src\redux\shop" />
       <recent name="D:\Proj\react-course\react-shop\src\components\cart-icon" />
-      <recent name="D:\Proj\react-course\react-shop\src\components\collection-item" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Proj\react-course\react-shop\src\components\menu-item" />
+      <recent name="D:\Proj\react-course\react-shop\src\components\homepage" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,7 +110,7 @@
       <workItem from="1603441114402" duration="6000" />
       <workItem from="1603555718110" duration="4039000" />
       <workItem from="1603612577978" duration="603000" />
-      <workItem from="1603703832168" duration="5424000" />
+      <workItem from="1603703832168" duration="15810000" />
     </task>
     <servers />
   </component>
@@ -135,17 +146,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1602593712693" />
-    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1603710504444">
+    <state x="460" y="136" width="615" height="610" key="find.popup" timestamp="1603792570676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603710504444" />
+    <state x="460" y="136" width="615" height="610" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603792570676" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1603709125762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603709125762" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603710732768">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603792569145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603710732768" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603792569145" />
   </component>
 </project>

@@ -8,15 +8,23 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
-  
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
   &:hover {
     img {
       opacity: 0.8;
+      @media only screen and (max-width: 800px) {
+        opacity: unset;
+      }
     }
 
     button {
       opacity: 0.85;
       display: flex;
+      @media only screen and (max-width: 800px) {
+        opacity: unset;
+      }
     }
   }
 `;
@@ -44,4 +52,8 @@ export const CollectionCustomButton = styled(CustomButtonContainer)`
   position: absolute;
   top: 255px;
   display: none;
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+    padding: 0 20px;
+  }
 `;
